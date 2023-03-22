@@ -25,6 +25,7 @@ function Vans() {
                                 <span key={item.id} className="grid-title">{item.name} </span>
                                 <span>$60/day</span>
                             </div>
+                            <i className={`van-type ${item.type} selected`}>{item.type}</i>
                         </div>
                     ))}
                 </div>
