@@ -1,23 +1,42 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 function Vans() {
-    const [array, setArray] = useState([])
+    const [vans, setVans] = useState([])
     useEffect(() => {
         async function fetchData() {
             const items = await fetch("/api/vans")
             const json = await items.json();
-            setArray(json.vans);
-            console.log(json.vans)
+            setVans(json.vans);
         }
         fetchData();
     }, [])
+
+    const dataItems = () => {
+
+        return (
+
+            <div className="head-container">
+                <h1>Explore Our Van Options</h1>
+                <div className="grid-container">
+                    {vans.map(item => (
+                        <div key={vans.id} className="small-grid" >
+                            <div><img className="grid-img" src={`${item.imageUrl}`} alt="van photo" /></div>
+                            <div className="grid-text">
+                                <span key={item.id} className="grid-title">{item.name} </span>
+                                <span>$60/day</span>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+        )
+
+    }
     return (
         <div>
-            <div>Explore Our Van Options</div>
 
-            {array.map(item => (
-                <div key={item.id}>{item.name}</div>
-            ))}
+            {dataItems()}
         </div>
     )
 }
