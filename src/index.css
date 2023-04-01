@@ -14,7 +14,12 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* Navbar Styles */
+
+
 .items{
+  
   width:15rem;
   display:flex;
   justify-content:space-between;
@@ -22,12 +27,17 @@ body {
   margin-right: 4rem;
 }
 .nav{
-  height: 5rem;
+  height: 11vh;
   display: flex;
   align-items: center;
   padding-block: 10px;
   justify-content:space-between;
 
+}
+.nav a{
+  text-decoration: none;
+  color: #4D4D4D;
+  font-size: 22px;
 }
 Link{
   text-color:#4D4D4D;
@@ -42,7 +52,7 @@ Link{
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  min-height: 38rem;
+  min-height:82vh;
   color: white;
   padding: 45px 23px;
 }
@@ -68,9 +78,46 @@ Link{
   transition: transform .1s ease-in-out;
 }
 
-.footer{
-  background: #252525;
+/*** ABOUT PAGE ***/
+.about-hero-image {
+  width:100vw;
+  max-width: 100%;
+  padding-inline: 23px;
+  background-size:cover;
+}
 
+.about-page-content {
+  padding-inline: 23px;
+  color: #161616;
+  margin-bottom: 55px;
+}
+
+.about-page-content h1 {
+  line-height: 38px;
+}
+
+.about-page-content p {
+  line-height: 22px;
+}
+
+.about-page-cta {
+  background-color: #FFCC8D;
+  color: #161616;
+  padding-inline: 32px;
+  padding-bottom: 32px;
+  margin-inline: 27px;
+  border-radius: 5px;
+}
+
+.about-page-cta h2 {
+  margin: 0;
+  padding-block: 37px;
+}
+
+.about-page-cta .link-button {
+  background-color: #161616;
+  color: white;
+  border-radius: 10px;
 }
 /* Vans Page */
 .grid-container {
@@ -160,7 +207,7 @@ Link{
 i[class*='van-type-'] {
   padding: 7px 14px;
 }
-//Van detail page
+/* Van detail page */
 
 
 .van-detail-container .back-button {
@@ -216,4 +263,33 @@ i[class*='van-type-'] {
   color: white;
   font-size: 1.125rem;
 }
+/* Footer Page */
+.footer{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background: #252525;
+  color:#AAAAAA;
+  height:7vh;
+}
 
+/* Host Navbar */
+
+.host-nav{
+  display:flex;
+  padding-block:10px;
+  margin-left:1rem;
+}
+
+.host-nav a {
+  text-decoration: none;
+  color: #4D4D4D;
+  font-weight: 500;
+  padding: 5px 20px;
+}
+
+.host-nav a:hover {
+  color: #161616;
+  text-decoration: underline;
+  font-weight: 600;
+}
