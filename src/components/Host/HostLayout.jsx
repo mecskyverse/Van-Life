@@ -1,16 +1,22 @@
 import React from 'react'
-import { Outlet, Link } from 'react-router-dom'
+import { Outlet, NavLink } from 'react-router-dom'
 import '../../index.css'
 function HostLayout() {
+    const activeStyle = {
+        fontWeight: "bold",
+        textDecoration: "underline",
+        color: "#161616"
+    }
     return (
         <div>
             <nav className="host-nav">
-                <Link to='/host'>Dashboard</Link>
-                <Link to='/host/income'>Income</Link>
-                <Link to='/host/reviews'>Reviews</Link>
+                <NavLink style={({ isActive }) => isActive ? activeStyle : null} end to='/host'>Dashboard</NavLink>
+                <NavLink style={({ isActive }) => isActive ? activeStyle : null} to='/host/income'>Income</NavLink>
+                <NavLink style={({ isActive }) => isActive ? activeStyle : null} to='/host/vans'>Vans</NavLink>
+                <NavLink style={({ isActive }) => isActive ? activeStyle : null} to='/host/reviews'>Reviews</NavLink>
             </nav>
             <Outlet />
-        </div>
+        </div >
     )
 }
 
