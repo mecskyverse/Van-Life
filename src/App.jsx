@@ -13,7 +13,8 @@ import Reviews from './components/Host/Reviews'
 import "../server"
 import Layout from './components/Layout'
 import HostVanDetailLayout from './components/Host/HostVanDetailLayout'
-
+import Pricing from "./components/Host/Pricing"
+import Photos from "./components/Host/Photos"
 function App() {
   return (
     <>
@@ -31,6 +32,8 @@ function App() {
               <Route path='Reviews' element={<Reviews />} />
               <Route path='vans' element={<HostVans />} />
               <Route path='vans/:id' element={<HostVanDetailLayout />} >
+                <Route path='pricing' element={<Pricing />} />
+                <Route path='photos' element={<Photos />} />
 
               </Route>
             </Route>
