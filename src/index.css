@@ -44,6 +44,11 @@ Link{
   text-decoration:none;
 }
 
+.site-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
 /* Home Page */
 .home-container {
@@ -265,6 +270,7 @@ i[class*='van-type-'] {
 }
 /* Footer Page */
 .footer{
+  margin-top: auto;
   display:flex;
   justify-content:center;
   align-items:center;
@@ -315,10 +321,47 @@ i[class*='van-type-'] {
   margin-right: 17px;
 }
 /* Host Van Details */
+.host-van-detail-layout-container {
+  background-color: white;
+  padding: 24px;
+  margin: 30px 26px;
+}
+
+.host-van-detail {
+  display: flex;
+  align-items: center;
+}
+
+.host-van-detail > img {
+  height: 160px;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.host-van-detail-info-text > h3 {
+  margin-top: 24px;
+  margin-bottom: 5px;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.host-van-detail-info-text > h4 {
+  font-size: 20px;
+  margin-block: 0;
+}
 .host-van-detail-nav{
   display:flex;
   width:30vw;
-  text-decoration:none;
   justify-content:space-between;
-  margin-left:3vw;
+  margin-block:1vw;
+}
+.host-van-detail-nav > a{
+  text-decoration:none;
+  font-size:1.1rem;
+  color: #4d4d4d;
+}
+.back-button{
+  margin:3vw;
+  text-decoration:none;
+
 }
