@@ -4,7 +4,7 @@ import About from './components/About'
 import Vans from './components/Vans/Vans'
 import VanDetail from './components/Vans/VanDetail'
 import HostVans from './components/Host/HostVans'
-import HostVansDetail from './components/Host/HostVansDetail'
+import HostVansDetail from './components/Host/HostVanDetail'
 import Footer from './components/Footer'
 import Dashboard from './components/Host/Dashboard'
 import HostLayout from './components/Host/HostLayout'
@@ -32,6 +32,7 @@ function App() {
               <Route path='Reviews' element={<Reviews />} />
               <Route path='vans' element={<HostVans />} />
               <Route path='vans/:id' element={<HostVanDetailLayout />} >
+                <Route index element={<HostVansDetail />} />
                 <Route path='pricing' element={<Pricing />} />
                 <Route path='photos' element={<Photos />} />
 
