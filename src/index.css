@@ -365,3 +365,6 @@ i[class*='van-type-'] {
   text-decoration:none;
 
 }
+.host-van-detail-image{
+  width:100px;
+}
