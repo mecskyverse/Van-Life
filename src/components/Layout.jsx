@@ -6,9 +6,11 @@ import '../index.css'
 export default function Layout() {
     return (
         <>
-            <Navbar />
-            <Outlet />
-            <Footer />
+            <div className="site-wrapper">
+                < Navbar />
+                <Outlet />
+                <Footer />
+            </div>
         </>
     )
 
