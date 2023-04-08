@@ -15,12 +15,14 @@ import Layout from './components/Layout'
 import HostVanDetailLayout from './components/Host/HostVanDetailLayout'
 import Pricing from "./components/Host/Pricing"
 import Photos from "./components/Host/Photos"
+import NotFound from './components/NotFound'
 function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
           <Route element={<Layout />}>
+
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/vans" element={<Vans />} />
@@ -38,6 +40,7 @@ function App() {
 
               </Route>
             </Route>
+            <Route path="*" element={<NotFound />} />
 
 
           </Route>
