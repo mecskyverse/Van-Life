@@ -9,6 +9,7 @@ import Home from './components/Home'
 import About from './components/About'
 import Vans, { loader as vansLoader } from './components/Vans/Vans'
 import VanDetail from './components/Vans/VanDetail'
+import Login from './components/Login'
 import HostVans from './components/Host/HostVans'
 import HostVansDetail from './components/Host/HostVanDetail'
 import Dashboard from './components/Host/Dashboard'
@@ -29,6 +30,7 @@ const router = createBrowserRouter(createRoutesFromElements(
     <Route path="about" element={<About />} />
     <Route path="vans" element={<Vans />} loader={vansLoader} errorElement={<Error />} />
     <Route path="vans/:id" element={<VanDetail />} />
+    <Route path="Login" element={<Login />} />
 
     <Route path="host" element={<HostLayout />}>
       <Route index element={<Dashboard />} />
