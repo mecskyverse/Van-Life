@@ -1,16 +1,14 @@
 import React, { useState, useEffect } from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLoaderData } from 'react-router-dom'
+import { getHostVans } from '../../api.js'
+import { requireAuth } from '../../utils.js';
+export async function loader() {
+    await requireAuth();
+    return getHostVans();
+}
 function HostVans() {
-    const [hostVans, setHostVans] = useState([])
-    useEffect(() => {
-        async function fetchData() {
-            const items = await fetch("/api/host/vans")
-            const json = await items.json();
-            setHostVans(json.vans);
-            console.log(json.vans);
-        }
-        fetchData();
-    }, [])
+
+    const hostVans = useLoaderData();
     const mapping = hostVans.map((hostVan) => {
         return (
             <NavLink style={{ textDecoration: "none" }} key={hostVan.id} to={hostVan.id} >

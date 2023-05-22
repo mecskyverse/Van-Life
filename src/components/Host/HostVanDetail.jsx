@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink, useOutletContext } from 'react-router-dom'
 function HostVansDetail() {
     const currentVan = useOutletContext();
-    console.log(currentVan);
+    // console.log(currentVan);
     return (
         <>
             <p><b>Name:</b> {currentVan.name}</p>
